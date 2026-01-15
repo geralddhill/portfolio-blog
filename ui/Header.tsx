@@ -30,7 +30,7 @@ export default function Header() {
         }
     ]
 
-    return (<div className="flex flex-col items-center w-full">
+    return (<header className="flex flex-col items-center w-full">
         <div className="flex align-center justify-between h-20 w-full px-6 py-4 border-b border-subtle md:h-24 xl:h-28">
             <Logo className="h-full" />
             <button onClick={() => setMenuOpen(!menuOpen)} className="h-8 my-auto md:hidden">
@@ -53,5 +53,5 @@ export default function Header() {
                 </Link>
             ))}
         </ul></nav>)}
-    </div>)
+    </header>)
 }
