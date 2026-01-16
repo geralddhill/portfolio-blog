@@ -1,6 +1,7 @@
 import "../ui/globals.css";
 import {barlow, playfair, poppins} from "@/ui/fonts";
 import Header from "@/ui/Header";
+import Footer from "@/ui/Footer";
 
 
 export default function RootLayout({
@@ -11,10 +12,11 @@ export default function RootLayout({
     return (
     <html lang="en" className={`${playfair.variable} ${barlow.variable} ${poppins.variable}`}>
       <body
-        className={`antialiased xl:px-32 2xl:px-72`}
+        className={`antialiased w-full`}
       >
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -30,8 +30,8 @@ export default function Header() {
         }
     ]
 
-    return (<div className="flex flex-col items-center w-full">
-        <div className="flex align-center justify-between h-20 w-full px-6 py-4 border-b border-subtle md:h-24 xl:h-28">
+    return (<header className="xl:px-32 2xl:px-72 flex flex-col items-center w-full">
+        <div className="flex align-center justify-between h-20 w-full px-6 py-4 border-b border-background2 md:h-24 xl:h-28">
             <Logo className="h-full" />
             <button onClick={() => setMenuOpen(!menuOpen)} className="h-8 my-auto md:hidden">
                 {menuOpen ? <XMarkIcon className="h-full text-foregound"/> : <Bars3Icon className="h-full text-foreground" />}
@@ -46,12 +46,12 @@ export default function Header() {
         </div>
         {menuOpen && (<nav className="w-full"><ul className="w-full">
             {navMenu.map((item) => (<Link key={item.name} href={item.path} className="w-full h-12">
-                    <li className={cn("w-full h-12 flex items-center justify-center hover:text-primary transition-colors duration-300 border-b border-subtle",
+                    <li className={cn("w-full h-12 flex items-center justify-center hover:text-primary transition-colors duration-300 border-b border-background2",
                         {"text-primary": item.path === pathname})}>
                         {item.name}
                     </li>
                 </Link>
             ))}
         </ul></nav>)}
-    </div>)
+    </header>)
 }
